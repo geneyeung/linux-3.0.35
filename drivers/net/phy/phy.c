@@ -787,9 +787,8 @@ void phy_state_machine(struct work_struct *work)
 		case PHY_UP:
 			
 			//Gene change
-			//needs_aneg = 1;
-			//phydev->link_timeout = PHY_AN_TIMEOUT;
-			phydev->state = PHY_NOLINK;
+			needs_aneg = 1;
+			phydev->link_timeout = PHY_AN_TIMEOUT;
 
 			break;
 		case PHY_AN:
